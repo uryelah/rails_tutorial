@@ -1,6 +1,11 @@
+  
 <h1>Sample App</h1>
 <p>
+  <%= @my %></br>
   This is the home page for the
+  <%= link_to "Go to help page", static_pages_help_url %>
   <a href="https://www.railstutorial.org/">Ruby on Rails Tutorial</a>
   sample application.
 </p>
+
+<%= render "partial" %>
