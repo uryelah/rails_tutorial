@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
@@ -29,7 +31,8 @@ gem 'jbuilder', '~> 2.5'
 gem 'jquery-rails', '>=4.3.1'
 # Use ActiveStorage variant
 # gem 'mini_magick', '~> 4.8'
-
+# gem rubocop for rails
+gem 'rubocop-rails'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
@@ -39,7 +42,7 @@ gem 'bootsnap', '>= 1.1.0', require: false
 group :development, :test do
   gem 'sqlite3'
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
-  gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
+  gem 'byebug', platforms: %i[mri mingw x64_mingw]
 end
 
 group :development do
@@ -51,11 +54,11 @@ group :development do
 end
 
 group :test do
-  gem 'rails-controller-testing', '>=1.0.2'
-  gem 'minitest',                 '>=5.10.3'
-  gem 'minitest-reporters',       '>=1.1.14'
   gem 'guard',                    '>=2.13.0'
   gem 'guard-minitest',           '>=2.4.4'
+  gem 'minitest',                 '>=5.10.3'
+  gem 'minitest-reporters',       '>=1.1.14'
+  gem 'rails-controller-testing', '>=1.0.2'
   # Adds support for Capybara system testing and selenium driver
   gem 'capybara', '>= 2.15'
   gem 'selenium-webdriver'
@@ -68,4 +71,4 @@ group :production do
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
-gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]
