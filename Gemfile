@@ -8,7 +8,12 @@ ruby '2.6.5'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.3'
 # Use bcrypt to encript auths
-gem 'bcrypt',         '~> 3.1.12'
+gem 'bcrypt', '~> 3.1.12'
+# Use faker to generate fake user data from the models
+gem 'faker', '~> 1.7.3'
+
+gem 'will_paginate', '~> 3.1.6'
+gem 'bootstrap-will_paginate', '1.0.0'
 # Use Bootstrap adapting it's Less to Sass
 gem 'bootstrap-sass', '3.3.7'
 # Use sqlite3 as the database for Active Record
